@@ -70,11 +70,3 @@ regressor_OLS.summary()
 X_opt = X_opt[:, [0, 1]]
 regressor_OLS = sm.OLS(endog = Y, exog = X_opt).fit()
 regressor_OLS.summary()
-
-
-
-
-
-
-
-
