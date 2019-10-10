@@ -1,4 +1,4 @@
-#ASSOCIATED LEARNING
+#ASSOCIATED RULE LEARNING
 #People who bought... also bought...
 
 #Apriori Algorithm
