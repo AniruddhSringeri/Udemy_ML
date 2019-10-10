@@ -25,7 +25,7 @@ y_train = sc_y.fit_transform(y_train.reshape(-1,1))"""
 # Fitting the Regression Model to the dataset
 #n_estimator refers to the number of decision trees that will make up our random forest.
 from sklearn.ensemble import RandomForestRegressor
-regressor = RandomForestRegressor(n_estimators = 1000, random_state = 0)
+regressor = RandomForestRegressor(n_estimators = 300, random_state = 0)
 regressor.fit(X,y)
 
 # Predicting a new result
@@ -33,7 +33,7 @@ y_pred = regressor.predict([[6.5]])
 
 #We need to use the visualisation template for higher resolutions because just like Decision Tree, random forest regression is also non-continuous.
 # Visualising the Regression results (for higher resolution and smoother curve)
-X_grid = np.arange(min(X), max(X), 0.1)
+X_grid = np.arange(min(X), max(X), 0.01)
 X_grid = X_grid.reshape((len(X_grid), 1))
 plt.scatter(X, y, color = 'red')
 plt.plot(X_grid, regressor.predict(X_grid), color = 'blue')
